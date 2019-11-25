@@ -77,28 +77,32 @@
 
 - (NSString *)addressForHomepage:(GBAWebBrowserHomepage)homepage
 {
-    NSString *address = @"http://google.com";
+    NSString *address = @"https://startpage.com";
     
     switch (homepage)
     {
+        case GBAWebBrowserHomepageStartpage:
+            address = @"https://startpage.com";
+            break;
+            
         case GBAWebBrowserHomepageGoogle:
-            address = @"http://www.google.com";
+            address = @"https://google.com";
             break;
             
         case GBAWebBrowserHomepageYahoo:
-            address = @"http://www.yahoo.com";
+            address = @"https://yahoo.com";
             break;
             
         case GBAWebBrowserHomepageBing:
-            address = @"http://www.bing.com";
+            address = @"https://bing.com";
             break;
             
         case GBAWebBrowserHomepageGameFAQs:
-            address = @"http://www.gamefaqs.com";
+            address = @"https://gamefaqs.com";
             break;
             
         case GBAWebBrowserHomepageSuperCheats:
-            address = @"http://www.supercheats.com";
+            address = @"https://supercheats.com";
             break;
             
         case GBAWebBrowserHomepageCustom:
@@ -107,14 +111,14 @@
             
             if (address.length == 0)
             {
-                address = @"http://gba4iosapp.com";
+                address = @"https://gba4iosapp.com";
             }
             
             NSURLComponents *components = [NSURLComponents componentsWithString:address];
             
             if (components.scheme == nil)
             {
-                components.scheme = @"http";
+                components.scheme = @"https";
                 
                 address = [components string];
             }

@@ -11,11 +11,12 @@
 typedef NS_ENUM(NSInteger, GBAWebBrowserHomepage)
 {
     GBAWebBrowserHomepageCustom       = -1,
-    GBAWebBrowserHomepageGoogle       = 0,
-    GBAWebBrowserHomepageYahoo        = 1,
-    GBAWebBrowserHomepageBing         = 2,
-    GBAWebBrowserHomepageGameFAQs     = 3,
-    GBAWebBrowserHomepageSuperCheats  = 4,
+    GBAWebBrowserHomepageStartpage    = 0,
+    GBAWebBrowserHomepageGoogle       = 1,
+    GBAWebBrowserHomepageYahoo        = 2,
+    GBAWebBrowserHomepageBing         = 3,
+    GBAWebBrowserHomepageGameFAQs     = 4,
+    GBAWebBrowserHomepageSuperCheats  = 5,
 };
 
 @interface GBAWebBrowserHomepageViewController : UITableViewController
