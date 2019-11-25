@@ -541,6 +541,10 @@ NSString *const GBASettingsDropboxStatusChangedNotification = @"GBASettingsDropb
     {
         username = @"mrjuanfernandez";
     }
+    else if (indexPath.row == 6)
+    {
+        username = @"rafaelmaeuer";
+    }
     
     [self openTwitterProfileForUsername:username];
     
