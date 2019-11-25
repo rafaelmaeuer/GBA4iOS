@@ -523,28 +523,29 @@ NSString *const GBASettingsDropboxStatusChangedNotification = @"GBASettingsDropb
     }
     else if (indexPath.row == 1)
     {
-        username = @"pau1thor";
+        username = @"rafaelmaeuer";
     }
     else if (indexPath.row == 2)
     {
-        username = @"alyssasurowiec";
+        username = @"pau1thor";
     }
     else if (indexPath.row == 3)
     {
-        username = @"rakashazi";
+        username = @"alyssasurowiec";
     }
     else if (indexPath.row == 4)
     {
-        username = @"zodttd";
+        username = @"rakashazi";
     }
     else if (indexPath.row == 5)
     {
-        username = @"mrjuanfernandez";
+        username = @"zodttd";
     }
     else if (indexPath.row == 6)
     {
-        username = @"rafaelmaeuer";
+        username = @"mrjuanfernandez";
     }
+    
     
     [self openTwitterProfileForUsername:username];
     
