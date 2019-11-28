@@ -242,8 +242,8 @@
     }
 }
 
-void AudioServicesStopSystemSound(int);
-void AudioServicesPlaySystemSoundWithVibration(int, id, NSDictionary *);
+//void AudioServicesStopSystemSound(int);
+//void AudioServicesPlaySystemSoundWithVibration(int, id, NSDictionary *);
 
 - (void)vibrate
 {
@@ -253,7 +253,7 @@ void AudioServicesPlaySystemSoundWithVibration(int, id, NSDictionary *);
         [generator prepare];
         [generator impactOccurred];
     } else {
-        AudioServicesStopSystemSound(kSystemSoundID_Vibrate);
+        //AudioServicesStopSystemSound(kSystemSoundID_Vibrate);
         
         int64_t vibrationLength = 30;
         
@@ -269,7 +269,8 @@ void AudioServicesPlaySystemSoundWithVibration(int, id, NSDictionary *);
         dictionary[@"VibePattern"] = pattern;
         dictionary[@"Intensity"] = @1;
         
-        AudioServicesPlaySystemSoundWithVibration(kSystemSoundID_Vibrate, nil, dictionary);
+        //AudioServicesPlaySystemSoundWithVibration(kSystemSoundID_Vibrate, nil, dictionary);
+        AudioServicesPlaySystemSoundWithCompletion(1104, nil);
     }
 }
 
