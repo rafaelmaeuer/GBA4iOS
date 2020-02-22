@@ -123,15 +123,15 @@ static GBAAppDelegate *_appDelegate;
     
 #if !(TARGET_IPHONE_SIMULATOR)
     
-//#warning Uncomment for release, and comment out Crashlytics. Can't have both at once :(
-    //[self setUpCrashCallbacks];
+//#TODO: Uncomment for release, and comment out Crashlytics. Can't have both at once :(
+    [self setUpCrashCallbacks];
     
-    NSString *apiKey = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Crashlytics" ofType:@"apikey"] encoding:NSUTF8StringEncoding error:nil];
-    
-    if (apiKey.length)
-    {
-        [Crashlytics startWithAPIKey:apiKey];
-    }
+//    NSString *apiKey = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Crashlytics" ofType:@"apikey"] encoding:NSUTF8StringEncoding error:nil];
+//
+//    if (apiKey.length)
+//    {
+//        [Crashlytics startWithAPIKey:apiKey];
+//    }
 #endif
     
     [self.window makeKeyAndVisible];
