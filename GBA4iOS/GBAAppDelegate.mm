@@ -380,13 +380,14 @@ void applicationDidCrash(siginfo_t *info, ucontext_t *uap, void *context)
             [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
         }
         
-        // Manually check for updates
+        // Automatically check for updates
         NSDate *lastManualFetch = [[NSUserDefaults standardUserDefaults] objectForKey:GBALastCheckForUpdatesKey];
         NSInteger daysPassed = [[NSDate date] daysSinceDate:lastManualFetch];
         
         if (!lastManualFetch || daysPassed > 0)
         {
-            [self manuallyCheckForUpdates];
+            //[self manuallyCheckForUpdates];
+            DLog("skipped automatic update check");
         }
         
     });
