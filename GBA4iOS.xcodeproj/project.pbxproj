@@ -14,6 +14,8 @@
 		1AD971E717D2B6EC007097BC /* GBAControllerSkinDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD971E617D2B6EC007097BC /* GBAControllerSkinDetailViewController.m */; };
 		1AD971F317D2C6ED007097BC /* GBAControllerSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD971F117D2C6ED007097BC /* GBAControllerSkin.m */; };
 		4996200C1BCB0E000010FBBE /* Acknowledgements.html in Resources */ = {isa = PBXBuildFile; fileRef = BFBA77B919B715E1000E8425 /* Acknowledgements.html */; };
+		5302B91724631BC70033BC98 /* Default.gbcskin in Resources */ = {isa = PBXBuildFile; fileRef = 5302B91624631BC70033BC98 /* Default.gbcskin */; };
+		5302B91824631BC70033BC98 /* Default.gbcskin in Resources */ = {isa = PBXBuildFile; fileRef = 5302B91624631BC70033BC98 /* Default.gbcskin */; };
 		AED1727B0C66F5B4067FF536 /* libPods-GBA4iOS-Simulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB593B152ECAB4C31CAC7F4A /* libPods-GBA4iOS-Simulator.a */; };
 		BF02AFDB182F3E590031B8B6 /* GBASyncingOverviewViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = BF02AFDA182F3E590031B8B6 /* GBASyncingOverviewViewController.mm */; };
 		BF02AFDF182F6E200031B8B6 /* GBASyncingDetailViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = BF02AFDE182F6E200031B8B6 /* GBASyncingDetailViewController.mm */; };
@@ -116,7 +118,6 @@
 		BF2F35CA183FF6F9002ACE90 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC2D571A1798F2EC00C616EB /* Images.xcassets */; };
 		BF2F35CB183FF6F9002ACE90 /* padButton.png in Resources */ = {isa = PBXBuildFile; fileRef = CC41AEA917A22EC90062DDD8 /* padButton.png */; };
 		BF2F35CC183FF6F9002ACE90 /* overlays128.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A5BAE7E17D04B0A00BABC01 /* overlays128.png */; };
-		BF2F35CE183FF6F9002ACE90 /* Default.gbcskin in Resources */ = {isa = PBXBuildFile; fileRef = CC5044E61814C474009F7B9E /* Default.gbcskin */; };
 		BF33ECF019C13127006E534B /* GBALinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF33ECEB19C13127006E534B /* GBALinkViewController.m */; };
 		BF33ECF119C13127006E534B /* GBALinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF33ECEB19C13127006E534B /* GBALinkViewController.m */; };
 		BF33ECF219C13127006E534B /* GBALinkNearbyPeersHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF33ECED19C13127006E534B /* GBALinkNearbyPeersHeaderFooterView.m */; };
@@ -298,7 +299,6 @@
 		CC33F0E317E9630F00F57D66 /* RSTFileBrowserTableViewCell+LongPressGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = CC33F0E217E9630F00F57D66 /* RSTFileBrowserTableViewCell+LongPressGestureRecognizer.m */; };
 		CC45EE1117E7E9D000AC29FA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC45EE1017E7E9D000AC29FA /* SystemConfiguration.framework */; };
 		CC491D4E17BCAA940060A107 /* GBASaveStateViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = CC491D4D17BCAA940060A107 /* GBASaveStateViewController.mm */; };
-		CC5044E71814C474009F7B9E /* Default.gbcskin in Resources */ = {isa = PBXBuildFile; fileRef = CC5044E61814C474009F7B9E /* Default.gbcskin */; };
 		CC5044E91814DC69009F7B9E /* Main.cc in Sources */ = {isa = PBXBuildFile; fileRef = CCFA71C0179D304600768D24 /* Main.cc */; settings = {COMPILER_FLAGS = "-w"; }; };
 		CC5044EA1814DC69009F7B9E /* EmuControls.cc in Sources */ = {isa = PBXBuildFile; fileRef = CCFA71C1179D304600768D24 /* EmuControls.cc */; settings = {COMPILER_FLAGS = "-w"; }; };
 		CC5044EB1814DC69009F7B9E /* VbamApi.cc in Sources */ = {isa = PBXBuildFile; fileRef = CCFA71C2179D304600768D24 /* VbamApi.cc */; settings = {COMPILER_FLAGS = "-w"; }; };
@@ -492,6 +492,7 @@
 		1AD971F117D2C6ED007097BC /* GBAControllerSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBAControllerSkin.m; sourceTree = "<group>"; wrapsLines = 1; };
 		2AB14B9DE1692B180B17DC12 /* Pods-GBA4iOS.jailbreak.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBA4iOS.jailbreak.xcconfig"; path = "Pods/Target Support Files/Pods-GBA4iOS/Pods-GBA4iOS.jailbreak.xcconfig"; sourceTree = "<group>"; };
 		435533468BE0AFA9062BB305 /* Pods-GBA4iOS-Simulator.enterprise.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBA4iOS-Simulator.enterprise.xcconfig"; path = "Pods/Target Support Files/Pods-GBA4iOS-Simulator/Pods-GBA4iOS-Simulator.enterprise.xcconfig"; sourceTree = "<group>"; };
+		5302B91624631BC70033BC98 /* Default.gbcskin */ = {isa = PBXFileReference; lastKnownFileType = file; name = Default.gbcskin; path = Skins/Default/GBC/Default/Default.gbcskin; sourceTree = SOURCE_ROOT; };
 		8918774AC40A694CD1822D06 /* Pods-GBA4iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBA4iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-GBA4iOS/Pods-GBA4iOS.release.xcconfig"; sourceTree = "<group>"; };
 		93DEC42F154D6D497A1FA930 /* Pods-GBA4iOS-Simulator.jailbreak.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBA4iOS-Simulator.jailbreak.xcconfig"; path = "Pods/Target Support Files/Pods-GBA4iOS-Simulator/Pods-GBA4iOS-Simulator.jailbreak.xcconfig"; sourceTree = "<group>"; };
 		AB593B152ECAB4C31CAC7F4A /* libPods-GBA4iOS-Simulator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GBA4iOS-Simulator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -761,7 +762,6 @@
 		CC45EE1017E7E9D000AC29FA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		CC491D4C17BCAA940060A107 /* GBASaveStateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBASaveStateViewController.h; sourceTree = "<group>"; };
 		CC491D4D17BCAA940060A107 /* GBASaveStateViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GBASaveStateViewController.mm; sourceTree = "<group>"; };
-		CC5044E61814C474009F7B9E /* Default.gbcskin */ = {isa = PBXFileReference; lastKnownFileType = file; name = Default.gbcskin; path = Skins/Default/GBC/Red/Default.gbcskin; sourceTree = SOURCE_ROOT; };
 		CC5756F1180C745200BF3DA5 /* ly_counter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ly_counter.cpp; path = "emu-ex-plus-alpha/GBC.emu/src/libgambatte/src/video/ly_counter.cpp"; sourceTree = SOURCE_ROOT; };
 		CC5756F2180C745200BF3DA5 /* lyc_irq.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = lyc_irq.cpp; path = "emu-ex-plus-alpha/GBC.emu/src/libgambatte/src/video/lyc_irq.cpp"; sourceTree = SOURCE_ROOT; };
 		CC5756F3180C745200BF3DA5 /* next_m0_time.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = next_m0_time.cpp; path = "emu-ex-plus-alpha/GBC.emu/src/libgambatte/src/video/next_m0_time.cpp"; sourceTree = SOURCE_ROOT; };
@@ -1634,12 +1634,12 @@
 		CC2D57381798F40E00C616EB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5302B91624631BC70033BC98 /* Default.gbcskin */,
 				BF40C32F19E09974003C73B5 /* Intro.mp4 */,
 				CC2D571A1798F2EC00C616EB /* Images.xcassets */,
 				BF0EBB1019C026E500703623 /* Launch Screen.xib */,
 				BF563AB4184B11C000722678 /* Launch Images */,
 				BFFA355117ECD2A70038D34F /* Default.gbaskin */,
-				CC5044E61814C474009F7B9E /* Default.gbcskin */,
 				CC41AEA917A22EC90062DDD8 /* padButton.png */,
 				1A5BAE7E17D04B0A00BABC01 /* overlays128.png */,
 				CC15E53C179ECDCC00449972 /* xButton.png */,
@@ -2092,6 +2092,7 @@
 			files = (
 				BF58D30F19B91550003B2B62 /* LICENSE.txt in Resources */,
 				BFB89E4418909EE8002E5F26 /* Default-Portrait@2x~ipad.png in Resources */,
+				5302B91824631BC70033BC98 /* Default.gbcskin in Resources */,
 				BF2F35C7183FF6F9002ACE90 /* Emulation.storyboard in Resources */,
 				BFB89E4218909EE8002E5F26 /* Default-Landscape~ipad.png in Resources */,
 				BF2F35C8183FF6F9002ACE90 /* Default.gbaskin in Resources */,
@@ -2106,7 +2107,6 @@
 				BF2F35CB183FF6F9002ACE90 /* padButton.png in Resources */,
 				BF8C11441A2D01DF00126A3D /* GBANoGamesView.xib in Resources */,
 				BF2F35CC183FF6F9002ACE90 /* overlays128.png in Resources */,
-				BF2F35CE183FF6F9002ACE90 /* Default.gbcskin in Resources */,
 				BFBA77BB19B715E1000E8425 /* Acknowledgements.html in Resources */,
 				BFB89E4818909EE8002E5F26 /* Default@2x.png in Resources */,
 				BFB89E4618909EE8002E5F26 /* Default-Portrait~ipad.png in Resources */,
@@ -2122,6 +2122,7 @@
 				BF58D30E19B91550003B2B62 /* LICENSE.txt in Resources */,
 				BFB89E4318909EE8002E5F26 /* Default-Portrait@2x~ipad.png in Resources */,
 				CC58C8F817E64A20008F472E /* Emulation.storyboard in Resources */,
+				5302B91724631BC70033BC98 /* Default.gbcskin in Resources */,
 				BFB89E4118909EE8002E5F26 /* Default-Landscape~ipad.png in Resources */,
 				BFFA355217ECD2A70038D34F /* Default.gbaskin in Resources */,
 				BFB89E3D18909EE8002E5F26 /* Default-568h@2x.png in Resources */,
@@ -2135,7 +2136,6 @@
 				BF3B2B6B1A2E3F3300301AE1 /* Localizable.strings in Resources */,
 				BF8C11431A2D01DF00126A3D /* GBANoGamesView.xib in Resources */,
 				1A5BAE7F17D04B0A00BABC01 /* overlays128.png in Resources */,
-				CC5044E71814C474009F7B9E /* Default.gbcskin in Resources */,
 				4996200C1BCB0E000010FBBE /* Acknowledgements.html in Resources */,
 				BFB89E4718909EE8002E5F26 /* Default@2x.png in Resources */,
 				BF3B2B771A2E3F3500301AE1 /* GBA4iOS-InfoPlist.strings in Resources */,
