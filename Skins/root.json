@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Gengar",
+    "imageUrl": "Gengar/portrait.png",
+    "skinUrl": "Gengar/Gengar.gbaskin"
+  },
+  {
+    "title": "Pikachu",
+    "imageUrl": "Pikachu/portrait.png",
+    "skinUrl": "Pikachu/Pikachu.gbcskin"
+  }
+]
