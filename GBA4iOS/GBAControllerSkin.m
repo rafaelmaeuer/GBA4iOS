@@ -96,7 +96,7 @@ NSString *const GBAControllerSkinMappingSizeHeightKey = @"height";
     self = [self initWithDictionary:dictionary];
     if (self)
     {
-        NSString *filename = @"skin";
+        NSString *filename = [dictionary[@"name"] copy];
         NSString *pathExtension = nil;
         
         if (self.type == GBAControllerSkinTypeGBA)

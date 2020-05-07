@@ -387,7 +387,7 @@ void applicationDidCrash(siginfo_t *info, ucontext_t *uap, void *context)
         if (!lastManualFetch || daysPassed > 0)
         {
             //[self manuallyCheckForUpdates];
-            DLog("skipped automatic update check");
+            NSLog(@"skipped automatic update check");
         }
         
     });

@@ -1,12 +1,158 @@
 [
   {
-    "title": "Gengar",
-    "imageUrl": "Gengar/portrait.png",
-    "skinUrl": "Gengar/Gengar.gbaskin"
+    "name": "GBA Default Skins",
+    "blurb": "Default GBA4iOS skins for GBA in different colors",
+    "skins": [
+      {
+        "type": 0,
+        "name":"Black",
+        "designer": {"name": "Paul Thorsen", "url":"https://pthorsen.com/gba4ios"},
+        "identifier":"com.GBA4iOS.default.black",
+        "portrait":{"assets":{"Resizable iPhone":"portrait.pdf","Resizable iPad":"portrait-ipad.pdf"}},
+        "landscape":{"assets":{"iPhone":"landscape.png","Resizable iPhone":"landscape.pdf","Resizable iPad":"landscape-ipad.pdf"}},
+        "debug":false
+      },
+      {
+        "type": 0,
+        "name":"White",
+        "designer": {"name": "Paul Thorsen", "url":"https://pthorsen.com/gba4ios"},
+        "identifier":"com.GBA4iOS.default.white",
+        "portrait":{"assets":{"Resizable iPhone":"portrait.pdf","Resizable iPad":"portrait-ipad.pdf"}},
+        "landscape":{"assets":{"iPhone":"landscape.png","Resizable iPhone":"landscape.pdf","Resizable iPad":"landscape-ipad.pdf"}},
+        "debug":false
+      },
+      {
+        "type": 0,
+        "name":"Blue",
+        "designer": {"name": "Paul Thorsen", "url":"https://pthorsen.com/gba4ios"},
+        "identifier":"com.GBA4iOS.default.blue",
+        "portrait":{"assets":{"Resizable iPhone":"portrait.pdf","Resizable iPad":"portrait-ipad.pdf"}},
+        "landscape":{"assets":{"iPhone":"landscape.png","Resizable iPhone":"landscape.pdf","Resizable iPad":"landscape-ipad.pdf"}},
+        "debug":false
+      },
+      {
+        "type": 0,
+        "name":"Green",
+        "designer": {"name": "Paul Thorsen", "url":"https://pthorsen.com/gba4ios"},
+        "identifier":"com.GBA4iOS.default.green",
+        "portrait":{"assets":{"Resizable iPhone":"portrait.pdf","Resizable iPad":"portrait-ipad.pdf"}},
+        "landscape":{"assets":{"iPhone":"landscape.png","Resizable iPhone":"landscape.pdf","Resizable iPad":"landscape-ipad.pdf"}},
+        "debug":false
+      },
+      {
+        "type": 0,
+        "name":"Yellow",
+        "designer": {"name": "Paul Thorsen", "url":"https://pthorsen.com/gba4ios"},
+        "identifier":"com.GBA4iOS.default.yellow",
+        "portrait":{"assets":{"Resizable iPhone":"portrait.pdf","Resizable iPad":"portrait-ipad.pdf"}},
+        "landscape":{"assets":{"iPhone":"landscape.png","Resizable iPhone":"landscape.pdf","Resizable iPad":"landscape-ipad.pdf"}},
+        "debug":false
+      },
+      {
+        "type": 0,
+        "name":"Orange",
+        "designer": {"name": "Paul Thorsen", "url":"https://pthorsen.com/gba4ios"},
+        "identifier":"com.GBA4iOS.default.orange",
+        "portrait":{"assets":{"Resizable iPhone":"portrait.pdf","Resizable iPad":"portrait-ipad.pdf"}},
+        "landscape":{"assets":{"iPhone":"landscape.png","Resizable iPhone":"landscape.pdf","Resizable iPad":"landscape-ipad.pdf"}},
+        "debug":false
+      },
+      {
+        "type": 0,
+        "name":"Purple",
+        "designer": {"name": "Paul Thorsen", "url":"https://pthorsen.com/gba4ios"},
+        "identifier":"com.GBA4iOS.default.purple",
+        "portrait":{"assets":{"Resizable iPhone":"portrait.pdf","Resizable iPad":"portrait-ipad.pdf"}},
+        "landscape":{"assets":{"iPhone":"landscape.png","Resizable iPhone":"landscape.pdf","Resizable iPad":"landscape-ipad.pdf"}},
+        "debug":false
+      },
+      {
+        "type": 0,
+        "name":"Red",
+        "designer": {"name": "Paul Thorsen", "url":"https://pthorsen.com/gba4ios"},
+        "identifier":"com.GBA4iOS.default.red",
+        "portrait":{"assets":{"Resizable iPhone":"portrait.pdf","Resizable iPad":"portrait-ipad.pdf"}},
+        "landscape":{"assets":{"iPhone":"landscape.png","Resizable iPhone":"landscape.pdf","Resizable iPad":"landscape-ipad.pdf"}},
+        "debug":false
+      }
+    ]
   },
   {
-    "title": "Pikachu",
-    "imageUrl": "Pikachu/portrait.png",
-    "skinUrl": "Pikachu/Pikachu.gbcskin"
+    "name": "GBC Default Skins",
+    "blurb": "Default GBA4iOS skins for GBC in different colors",
+    "skins": [
+      {
+        "type": 1,
+        "name":"Black",
+        "designer": {"name": "Paul Thorsen", "url":"https://pthorsen.com/gba4ios"},
+        "identifier":"com.GBA4iOS.default.black",
+        "portrait":{"assets":{"Resizable iPhone":"portrait.pdf","Resizable iPad":"portrait-ipad.pdf"}},
+        "landscape":{"assets":{"iPhone":"landscape.png","Resizable iPhone":"landscape.pdf","Resizable iPad":"landscape-ipad.pdf"}},
+        "debug":false
+      },
+      {
+        "type": 1,
+        "name":"White",
+        "designer": {"name": "Paul Thorsen", "url":"https://pthorsen.com/gba4ios"},
+        "identifier":"com.GBA4iOS.default.white",
+        "portrait":{"assets":{"Resizable iPhone":"portrait.pdf","Resizable iPad":"portrait-ipad.pdf"}},
+        "landscape":{"assets":{"iPhone":"landscape.png","Resizable iPhone":"landscape.pdf","Resizable iPad":"landscape-ipad.pdf"}},
+        "debug":false
+      },
+      {
+        "type": 1,
+        "name":"Blue",
+        "designer": {"name": "Paul Thorsen", "url":"https://pthorsen.com/gba4ios"},
+        "identifier":"com.GBA4iOS.default.blue",
+        "portrait":{"assets":{"Resizable iPhone":"portrait.pdf","Resizable iPad":"portrait-ipad.pdf"}},
+        "landscape":{"assets":{"iPhone":"landscape.png","Resizable iPhone":"landscape.pdf","Resizable iPad":"landscape-ipad.pdf"}},
+        "debug":false
+      },
+      {
+        "type": 1,
+        "name":"Green",
+        "designer": {"name": "Paul Thorsen", "url":"https://pthorsen.com/gba4ios"},
+        "identifier":"com.GBA4iOS.default.green",
+        "portrait":{"assets":{"Resizable iPhone":"portrait.pdf","Resizable iPad":"portrait-ipad.pdf"}},
+        "landscape":{"assets":{"iPhone":"landscape.png","Resizable iPhone":"landscape.pdf","Resizable iPad":"landscape-ipad.pdf"}},
+        "debug":false
+      },
+      {
+        "type": 1,
+        "name":"Yellow",
+        "designer": {"name": "Paul Thorsen", "url":"https://pthorsen.com/gba4ios"},
+        "identifier":"com.GBA4iOS.default.yellow",
+        "portrait":{"assets":{"Resizable iPhone":"portrait.pdf","Resizable iPad":"portrait-ipad.pdf"}},
+        "landscape":{"assets":{"iPhone":"landscape.png","Resizable iPhone":"landscape.pdf","Resizable iPad":"landscape-ipad.pdf"}},
+        "debug":false
+      },
+      {
+        "type": 1,
+        "name":"Orange",
+        "designer": {"name": "Paul Thorsen", "url":"https://pthorsen.com/gba4ios"},
+        "identifier":"com.GBA4iOS.default.orange",
+        "portrait":{"assets":{"Resizable iPhone":"portrait.pdf","Resizable iPad":"portrait-ipad.pdf"}},
+        "landscape":{"assets":{"iPhone":"landscape.png","Resizable iPhone":"landscape.pdf","Resizable iPad":"landscape-ipad.pdf"}},
+        "debug":false
+      },
+      {
+        "type": 1,
+        "name":"Purple",
+        "designer": {"name": "Paul Thorsen", "url":"https://pthorsen.com/gba4ios"},
+        "identifier":"com.GBA4iOS.default.purple",
+        "portrait":{"assets":{"Resizable iPhone":"portrait.pdf","Resizable iPad":"portrait-ipad.pdf"}},
+        "landscape":{"assets":{"iPhone":"landscape.png","Resizable iPhone":"landscape.pdf","Resizable iPad":"landscape-ipad.pdf"}},
+        "debug":false
+      },
+      {
+        "type": 1,
+        "name":"Red",
+        "designer": {"name": "Paul Thorsen", "url":"https://pthorsen.com/gba4ios"},
+        "identifier":"com.GBA4iOS.default.red",
+        "portrait":{"assets":{"Resizable iPhone":"portrait.pdf","Resizable iPad":"portrait-ipad.pdf"}},
+        "landscape":{"assets":{"iPhone":"landscape.png","Resizable iPhone":"landscape.pdf","Resizable iPad":"landscape-ipad.pdf"}},
+        "debug":false
+      }
+    ]
   }
 ]
