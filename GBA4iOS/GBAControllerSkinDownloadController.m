@@ -13,7 +13,7 @@
 #import <AFNetworking/AFNetworking.h>
 #import <AFNetworking/AFURLResponseSerialization.h>
 
-NSString * const GBAControllerSkinsRootAddress = @"https://rafaelmaeuer.de/GBA4iOS/";
+NSString * const GBAControllerSkinsRootAddress = @"https://rafaelmaeuer.de/GBA4iOS/skins/";
 
 static void *GBAControllerSkinDownloadControllerContext = &GBAControllerSkinDownloadControllerContext;
 
