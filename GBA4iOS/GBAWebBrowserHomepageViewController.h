@@ -11,8 +11,8 @@
 typedef NS_ENUM(NSInteger, GBAWebBrowserHomepage)
 {
     GBAWebBrowserHomepageCustom       = -1,
-    GBAWebBrowserHomepageStartpage    = 0,
-    GBAWebBrowserHomepageGoogle       = 1,
+    GBAWebBrowserHomepageGoogle       = 0,
+    GBAWebBrowserHomepageStartpage    = 1,
     GBAWebBrowserHomepageYahoo        = 2,
     GBAWebBrowserHomepageBing         = 3,
     GBAWebBrowserHomepageGameFAQs     = 4,

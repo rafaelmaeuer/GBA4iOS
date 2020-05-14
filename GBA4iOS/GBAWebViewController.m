@@ -77,16 +77,16 @@
 
 - (NSString *)addressForHomepage:(GBAWebBrowserHomepage)homepage
 {
-    NSString *address = @"https://startpage.com";
+    NSString *address = @"https://google.com";
     
     switch (homepage)
     {
-        case GBAWebBrowserHomepageStartpage:
-            address = @"https://startpage.com";
-            break;
-            
         case GBAWebBrowserHomepageGoogle:
             address = @"https://google.com";
+            break;
+            
+        case GBAWebBrowserHomepageStartpage:
+            address = @"https://startpage.com";
             break;
             
         case GBAWebBrowserHomepageYahoo:

@@ -49,14 +49,14 @@
     
     switch (webBrowserHomepage)
     {
+        case GBAWebBrowserHomepageGoogle:
+            localizedName = NSLocalizedString(@"Google", @"");
+            break;
+        
         case GBAWebBrowserHomepageStartpage:
             localizedName = NSLocalizedString(@"Startpage", @"");
             break;
         
-        case GBAWebBrowserHomepageGoogle:
-            localizedName = NSLocalizedString(@"Google", @"");
-            break;
-            
         case GBAWebBrowserHomepageYahoo:
             localizedName = NSLocalizedString(@"Yahoo", @"");
             break;
