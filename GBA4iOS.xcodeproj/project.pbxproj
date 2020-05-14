@@ -2761,6 +2761,7 @@
 				CLANG_MODULES_AUTOLINK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 2.2;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GBA4iOS/GBA4iOS-Prefix.pch";
@@ -2791,6 +2792,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
 				);
+				MARKETING_VERSION = 2.2;
 				OTHER_LDFLAGS = (
 					"-Objc",
 					"-all_load",
@@ -2814,6 +2816,7 @@
 				CLANG_MODULES_AUTOLINK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 2.2;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GBA4iOS/GBA4iOS-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -2839,6 +2842,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
 				);
+				MARKETING_VERSION = 2.2;
 				OTHER_LDFLAGS = (
 					"-Objc",
 					"-all_load",
@@ -2862,6 +2866,7 @@
 				CLANG_MODULES_AUTOLINK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 2.2;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GBA4iOS/GBA4iOS-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -2887,6 +2892,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
 				);
+				MARKETING_VERSION = 2.2;
 				OTHER_LDFLAGS = (
 					"-Objc",
 					"-all_load",
@@ -3024,6 +3030,7 @@
 				CODE_SIGN_ENTITLEMENTS = GBA4iOS/GBA4iOS.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5VQK5LXSL6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3046,6 +3053,7 @@
 					"\"$(SRCROOT)/SFML/include/\"",
 				);
 				INFOPLIST_FILE = "GBA4iOS/GBA4iOS-Info.plist";
+				MARKETING_VERSION = 2.2;
 				OTHER_LDFLAGS = (
 					"-Objc",
 					"-all_load",
@@ -3067,6 +3075,7 @@
 				CLANG_MODULES_AUTOLINK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 2.2;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GBA4iOS/GBA4iOS-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -3092,6 +3101,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
 				);
+				MARKETING_VERSION = 2.2;
 				OTHER_LDFLAGS = (
 					"-Objc",
 					"-all_load",
@@ -3227,6 +3237,7 @@
 				CODE_SIGN_ENTITLEMENTS = GBA4iOS/GBA4iOS.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5VQK5LXSL6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GBA4iOS/GBA4iOS-Prefix.pch";
@@ -3244,6 +3255,7 @@
 					"\"$(SRCROOT)/SFML/include/\"",
 				);
 				INFOPLIST_FILE = "GBA4iOS/GBA4iOS-Info.plist";
+				MARKETING_VERSION = 2.2;
 				OTHER_LDFLAGS = (
 					"-Objc",
 					"-all_load",
@@ -3264,6 +3276,7 @@
 				CLANG_MODULES_AUTOLINK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 2.2;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GBA4iOS/GBA4iOS-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -3289,6 +3302,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
 				);
+				MARKETING_VERSION = 2.2;
 				OTHER_LDFLAGS = (
 					"-Objc",
 					"-all_load",
@@ -3540,6 +3554,7 @@
 				CODE_SIGN_ENTITLEMENTS = GBA4iOS/GBA4iOS.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5VQK5LXSL6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3562,6 +3577,7 @@
 					"\"$(SRCROOT)/SFML/include/\"",
 				);
 				INFOPLIST_FILE = "GBA4iOS/GBA4iOS-Info.plist";
+				MARKETING_VERSION = 2.2;
 				OTHER_LDFLAGS = (
 					"-Objc",
 					"-all_load",
@@ -3585,6 +3601,7 @@
 				CODE_SIGN_ENTITLEMENTS = GBA4iOS/GBA4iOS.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5VQK5LXSL6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GBA4iOS/GBA4iOS-Prefix.pch";
@@ -3602,6 +3619,7 @@
 					"\"$(SRCROOT)/SFML/include/\"",
 				);
 				INFOPLIST_FILE = "GBA4iOS/GBA4iOS-Info.plist";
+				MARKETING_VERSION = 2.2;
 				OTHER_LDFLAGS = (
 					"-Objc",
 					"-all_load",
@@ -3736,6 +3754,7 @@
 				CODE_SIGN_ENTITLEMENTS = GBA4iOS/GBA4iOS.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5VQK5LXSL6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3758,6 +3777,7 @@
 					"\"$(SRCROOT)/SFML/include/\"",
 				);
 				INFOPLIST_FILE = "GBA4iOS/GBA4iOS-Info.plist";
+				MARKETING_VERSION = 2.2;
 				OTHER_LDFLAGS = (
 					"-Objc",
 					"-all_load",
