@@ -228,6 +228,7 @@ static void *GBAControllerSkinDownloadViewControllerContext = &GBAControllerSkin
             {
                 self.progressView.progress = progress.fractionCompleted;
             }
+            NSLog(@"Download Progress: @%f", self.progressView.progress);
             
         });
     }

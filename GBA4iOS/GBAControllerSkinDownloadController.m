@@ -69,7 +69,8 @@ static void *GBAControllerSkinDownloadControllerContext = &GBAControllerSkinDown
     NSURL *URL = [NSURL URLWithString:address];
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     
-    NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, NSArray *groups, NSError *error) {
+    //NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, NSArray *groups, NSError *error) {
+    NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request uploadProgress:nil downloadProgress:nil completionHandler:^(NSURLResponse *response, NSArray *groups, NSError *error) {
         
         dispatch_async(dispatch_get_main_queue(), ^{
             if (error)
@@ -94,11 +95,18 @@ static void *GBAControllerSkinDownloadControllerContext = &GBAControllerSkinDown
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
     
     NSString *address = [GBAControllerSkinsRootAddress stringByAppendingPathComponent:[NSString stringWithFormat:@"%@/%@/%@", [GBAControllerSkinDownloadController stringForControllerSkinType:controllerSkin.type], controllerSkin.identifier, controllerSkin.filename]];
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:address]];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:address]];
+    [request setValue:@"" forHTTPHeaderField:@"Accept-Encoding"];
     
-    NSProgress *progress = nil;
+    //NSProgress *progress = nil;
+    __block BOOL init = YES;
     
-    __strong NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request progress:&progress destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
+    //__strong NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request progress:&progress destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
+    __strong NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
+        // This is not called back on the main queue.
+        // You are responsible for dispatching to the main queue for UI updates
+        [self updateProgressBar:downloadProgress BOOL:&init];
+    } destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
         
         NSString *filepath = [[targetPath path] stringByDeletingPathExtension];
         filepath = [filepath stringByAppendingPathExtension:controllerSkin.filename.pathExtension];
@@ -129,8 +137,8 @@ static void *GBAControllerSkinDownloadControllerContext = &GBAControllerSkinDown
                                                            });
                                                        }];
     
-    [progress addObserver:self forKeyPath:@"totalUnitCount" options:NSKeyValueObservingOptionNew context:GBAControllerSkinDownloadControllerContext];
-    [progress addObserver:self forKeyPath:@"completedUnitCount" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:GBAControllerSkinDownloadControllerContext];
+    //[progress addObserver:self forKeyPath:@"totalUnitCount" options:NSKeyValueObservingOptionNew context:GBAControllerSkinDownloadControllerContext];
+    //[progress addObserver:self forKeyPath:@"completedUnitCount" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:GBAControllerSkinDownloadControllerContext];
     
     [downloadTask resume];
 }
@@ -170,7 +178,28 @@ static void *GBAControllerSkinDownloadControllerContext = &GBAControllerSkinDown
 
 #pragma mark - KVO -
 
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+- (void)updateProgressBar:(NSProgress *)downloadProgress BOOL:(BOOL *)init {
+        
+   if (*init == YES)
+   {
+       *init = NO;
+       [self.progress setTotalUnitCount:self.progress.totalUnitCount + downloadProgress.totalUnitCount];
+       //NSLog(@"Download totalUnitCount: @%lli", self.progress.totalUnitCount);
+   }
+
+   self.progress.completedUnitCount = downloadProgress.completedUnitCount;
+   //NSLog(@"Download completedUnitCount: @%lli", self.progress.completedUnitCount);
+  
+   if (downloadProgress.fractionCompleted == 1)
+   {
+       self.progress.completedUnitCount = 0.0;
+       self.progress.totalUnitCount = 0.0;
+   }
+}
+
+// Deprecated as download progress is now handled with void function (from AFNetworking v3+)
+// 'totalUnitCount' key doesn't appear anymore and observers not working in function context
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context DEPRECATED_ATTRIBUTE
 {
     if (context != GBAControllerSkinDownloadControllerContext)
     {

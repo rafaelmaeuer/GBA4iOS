@@ -35,8 +35,9 @@ NSString * const GBAEventDistributionRootAddress = @"http://gba4iosapp.com/delta
     NSURL *URL = [NSURL URLWithString:address];
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     
-    NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, NSArray *jsonObject, NSError *error) {
-        
+    //NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, NSArray *jsonObject, NSError *error) {
+    NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request uploadProgress:nil downloadProgress:nil completionHandler:^(NSURLResponse *response, NSArray *jsonObject, NSError *error) {
+    
         NSMutableArray *events = [NSMutableArray array];
         
         for (NSDictionary *dictionary in jsonObject)

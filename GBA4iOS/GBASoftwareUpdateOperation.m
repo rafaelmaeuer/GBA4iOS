@@ -35,7 +35,8 @@ static NSString * const GBASoftwareUpdateRootAddress = @"http://gba4iosapp.com/d
     NSURL *URL = [NSURL URLWithString:address];
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     
-    NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, NSDictionary *jsonObject, NSError *error) {
+    //NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, NSDictionary *jsonObject, NSError *error) {
+    NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request uploadProgress:nil downloadProgress:nil completionHandler:^(NSURLResponse *response, NSDictionary *jsonObject, NSError *error) {
         
         GBASoftwareUpdate *softwareUpdate = [[GBASoftwareUpdate alloc] initWithDictionary:jsonObject];
         

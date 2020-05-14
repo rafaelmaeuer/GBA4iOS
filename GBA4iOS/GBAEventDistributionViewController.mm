@@ -258,7 +258,8 @@ static void * GBADownloadProgressTotalUnitContext = &GBADownloadProgressTotalUni
     
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     
-    NSProgress *progress = nil;
+    //NSProgress *progress = nil;
+    __block BOOL init = YES;
     __block NSProgress *strongReferenceProgress = nil;
     
     // iOS 8 crashes when trying to figure out destinationURL in destination block
@@ -267,7 +268,13 @@ static void * GBADownloadProgressTotalUnitContext = &GBADownloadProgressTotalUni
     
     NSURL *destinationURL = [NSURL fileURLWithPath:[uniqueEventDirectory stringByAppendingPathComponent:[self remoteROMFilename]]];
     
-    __strong NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request progress:&progress destination:^NSURL *(NSURL *targetPath, NSURLResponse *response)
+    //__strong NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request progress:&progress destination:^NSURL *(NSURL *targetPath, NSURLResponse *response)
+    __strong NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
+        // This is not called back on the main queue.
+        // You are responsible for dispatching to the main queue for UI updates
+        [self updateProgressBar:downloadProgress BOOL:&init];
+        strongReferenceProgress = downloadProgress;
+    } destination:^NSURL *(NSURL *targetPath, NSURLResponse *response)
     {
         return destinationURL;
         
@@ -295,10 +302,10 @@ static void * GBADownloadProgressTotalUnitContext = &GBADownloadProgressTotalUni
                                                            [self updateSectionForEvent:event]; // Has to go after writing to file
                                                        }];
     
-    [progress addObserver:self forKeyPath:@"totalUnitCount" options:NSKeyValueObservingOptionNew context:GBADownloadProgressTotalUnitContext];
-    [progress addObserver:self forKeyPath:@"completedUnitCount" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:GBADownloadProgressContext];
+    //[progress addObserver:self forKeyPath:@"totalUnitCount" options:NSKeyValueObservingOptionNew context:GBADownloadProgressTotalUnitContext];
+    //[progress addObserver:self forKeyPath:@"completedUnitCount" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:GBADownloadProgressContext];
     
-    strongReferenceProgress = progress;
+    //strongReferenceProgress = progress;
     
     [downloadTask resume];
     
@@ -328,7 +335,35 @@ static void * GBADownloadProgressTotalUnitContext = &GBADownloadProgressTotalUni
     self.downloadProgress.totalUnitCount = 0;
 }
 
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+- (void)updateProgressBar:(NSProgress *)downloadProgress BOOL:(BOOL *)init {
+        
+    if (*init == YES)
+    {
+        *init = NO;
+        if (self.downloadProgressView.alpha == 0)
+        {
+            [self showDownloadProgressView];
+        }
+       
+        [self.downloadProgress setTotalUnitCount:self.downloadProgress.totalUnitCount + downloadProgress.totalUnitCount];
+        //NSLog(@"Download totalUnitCount: @%lli", self.progress.totalUnitCount);
+    }
+
+    self.downloadProgress.completedUnitCount = downloadProgress.completedUnitCount;
+    [self.downloadProgressView setProgress:downloadProgress.fractionCompleted animated:YES];
+    
+    DLog(@"%f", downloadProgress.fractionCompleted);
+        
+    if (downloadProgress.fractionCompleted == 1)
+    {
+        [self hideDownloadProgressView];
+    }
+}
+
+// Deprecated as download progress is now handled with void function (from AFNetworking v3+)
+// 'totalUnitCount' key doesn't appear anymore and observers not working in function context
+// This feature is untested (there might be no GBA Events in future anymore)
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context DEPRECATED_ATTRIBUTE
 {
     if (context == GBADownloadProgressContext)
     {
@@ -371,8 +406,6 @@ static void * GBADownloadProgressTotalUnitContext = &GBADownloadProgressTotalUni
         [self.downloadProgress setTotalUnitCount:self.downloadProgress.totalUnitCount + progress.totalUnitCount];
         
         [progress removeObserver:self forKeyPath:@"totalUnitCount" context:GBADownloadProgressTotalUnitContext];
-        
-        
         
         return;
     }

@@ -130,7 +130,8 @@
     manager.responseSerializer = serializer;
     
     __weak __typeof__(self) weakSelf = self;
-    self.imageDataTask = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, UIImage *image, NSError *error) {
+    //self.imageDataTask = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, UIImage *image, NSError *error) {
+    self.imageDataTask = [manager dataTaskWithRequest:request uploadProgress:nil downloadProgress:nil completionHandler:^(NSURLResponse * response, UIImage *image, NSError *error) {
         
         if ([error code] == NSURLErrorCancelled)
         {
