@@ -98,14 +98,11 @@ static void *GBAControllerSkinDownloadControllerContext = &GBAControllerSkinDown
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:address]];
     [request setValue:@"" forHTTPHeaderField:@"Accept-Encoding"];
     
-    //NSProgress *progress = nil;
-    __block BOOL init = YES;
+    __block NSProgress *progress = nil;
     
-    //__strong NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request progress:&progress destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
-    __strong NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
-        // This is not called back on the main queue.
-        // You are responsible for dispatching to the main queue for UI updates
-        [self updateProgressBar:downloadProgress BOOL:&init];
+    __strong NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request
+        progress:^(NSProgress * _Nonnull downloadProgress) {
+            progress = downloadProgress;
     } destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
         
         NSString *filepath = [[targetPath path] stringByDeletingPathExtension];
@@ -113,29 +110,28 @@ static void *GBAControllerSkinDownloadControllerContext = &GBAControllerSkinDown
         
         return [NSURL fileURLWithPath:filepath];
         
-    } completionHandler:^(NSURLResponse *response, NSURL *fileURL, NSError *error)
-                                                       {
-                                                           dispatch_async(dispatch_get_main_queue(), ^{
-                                                               if (error)
-                                                               {
-                                                                   if (completion)
-                                                                   {
-                                                                       completion(nil, error);
-                                                                   }
-                                                                   
-                                                                   [[NSFileManager defaultManager] removeItemAtURL:fileURL error:nil];
-                                                                   
-                                                                   return;
-                                                               }
-                                                               
-                                                               if (completion)
-                                                               {
-                                                                   completion(fileURL, error);
-                                                               }
-                                                               
-                                                               [[NSFileManager defaultManager] removeItemAtURL:fileURL error:nil];
-                                                           });
-                                                       }];
+    } completionHandler:^(NSURLResponse *response, NSURL *fileURL, NSError *error) {
+       dispatch_async(dispatch_get_main_queue(), ^{
+           if (error)
+           {
+               if (completion)
+               {
+                   completion(nil, error);
+               }
+               
+               [[NSFileManager defaultManager] removeItemAtURL:fileURL error:nil];
+               
+               return;
+           }
+           
+           if (completion)
+           {
+               completion(fileURL, error);
+           }
+           
+           [[NSFileManager defaultManager] removeItemAtURL:fileURL error:nil];
+       });
+    }];
     
     //[progress addObserver:self forKeyPath:@"totalUnitCount" options:NSKeyValueObservingOptionNew context:GBAControllerSkinDownloadControllerContext];
     //[progress addObserver:self forKeyPath:@"completedUnitCount" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:GBAControllerSkinDownloadControllerContext];
