@@ -77,7 +77,7 @@
 
 - (NSString *)addressForHomepage:(GBAWebBrowserHomepage)homepage
 {
-    NSString *address = @"https://google.com";
+    NSString *address = @"https://rafaelmaeuer.de/GBA4iOS";
     
     switch (homepage)
     {
@@ -111,7 +111,7 @@
             
             if (address.length == 0)
             {
-                address = @"https://gba4iosapp.com";
+                address = @"https://rafaelmaeuer.de/GBA4iOS";
             }
             
             NSURLComponents *components = [NSURLComponents componentsWithString:address];

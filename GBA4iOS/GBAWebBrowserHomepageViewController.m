@@ -26,6 +26,11 @@
         
     }
     
+    //GBAWebBrowserHomepage homepage = [[NSUserDefaults standardUserDefaults] integerForKey:GBASettingsSelectedHomepageKey];
+    //if (homepage == 0) {
+    //    [[NSUserDefaults standardUserDefaults] setInteger:-1 forKey:GBASettingsSelectedHomepageKey];
+    //}
+    
     return self;
 }
 
@@ -109,7 +114,7 @@
     
     GBAWebBrowserHomepage homepage = [[NSUserDefaults standardUserDefaults] integerForKey:GBASettingsSelectedHomepageKey];
     
-    if (indexPath.row == homepage || (homepage == GBAWebBrowserHomepageCustom && indexPath.row == [self.tableView numberOfRowsInSection:0] - 1))
+    if (indexPath.row + 1 == homepage || (homepage == GBAWebBrowserHomepageCustom && indexPath.row == [self.tableView numberOfRowsInSection:0] - 1))
     {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     }
@@ -130,7 +135,7 @@
         return;
     }
     
-    GBAWebBrowserHomepage homepage = indexPath.row;
+    GBAWebBrowserHomepage homepage = indexPath.row + 1;
     
     if (indexPath.row == [tableView numberOfRowsInSection:0] - 1)
     {
