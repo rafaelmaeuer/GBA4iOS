@@ -169,8 +169,9 @@
             
             if (![softwareUpdate isNewerThanAppVersion] || ![softwareUpdate isSupportedOnCurrentiOSVersion])
             {
+                NSString *appVersion = [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleShortVersionString"];
                 NSString *bundleVersion = [[NSBundle mainBundle] objectForInfoDictionaryKey:(NSString*)kCFBundleVersionKey];
-                NSString *upToDateMessage = [NSString stringWithFormat:@"GBA4iOS %@\n%@", bundleVersion, NSLocalizedString(@"Your software is up to date.", @"")];
+                NSString *upToDateMessage = [NSString stringWithFormat:@"GBA4iOS %@ (b%@)\n%@", appVersion, bundleVersion, NSLocalizedString(@"Your software is up to date.", @"")];
                 
                 self.statusLabel.text = upToDateMessage;
                 

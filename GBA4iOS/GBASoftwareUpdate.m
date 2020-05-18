@@ -69,7 +69,9 @@
 
 - (BOOL)isNewerThanAppVersion
 {
-    return ([[[NSBundle mainBundle] objectForInfoDictionaryKey:(NSString *)kCFBundleVersionKey] compare:self.version options:NSNumericSearch] == NSOrderedAscending);
+    NSString *appVersion = [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleShortVersionString"];
+    NSString *bundleVersion = [[NSBundle mainBundle] objectForInfoDictionaryKey:(NSString*)kCFBundleVersionKey];
+    return ([[[NSBundle mainBundle] objectForInfoDictionaryKey:appVersion] compare:self.version options:NSNumericSearch] == NSOrderedAscending);
 }
 
 - (BOOL)isSupportedOnCurrentiOSVersion
