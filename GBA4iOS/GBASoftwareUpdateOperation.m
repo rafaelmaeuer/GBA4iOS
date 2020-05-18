@@ -11,7 +11,7 @@
 #import <AFNetworking/AFNetworking.h>
 #import <AFNetworking/AFNetworkActivityIndicatorManager.h>
 
-static NSString * const GBASoftwareUpdateRootAddress = @"http://gba4iosapp.com/delta/software_update/";
+static NSString * const GBASoftwareUpdateRootAddress = @"https://rafaelmaeuer.de/GBA4iOS/software_update";
 
 @implementation GBASoftwareUpdateOperation
 

@@ -1,0 +1,9 @@
+{
+  "name": "GBA4iOS",
+  "version": "2.2",
+  "developer": "Riley Testut",
+  "releaseNotes": "This version of GBA4iOS includes:\n\n- WKWebView support",
+  "minimumiOSVersion": "9.0",
+  "url": "https://rafaelmaeuer.de/GBA4iOS/software_update/GBA4iOS-v2.2.zip",
+  "size": "11500"
+}
