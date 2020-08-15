@@ -7,6 +7,7 @@ The number one Game Boy Advance emulator for iOS is back, and has been rewritten
 
 ### New Features ###
 
+• Works with iOS 13.6
 • Full migrated to WKWebView  
 • Completely new emulator core based on VBA-M  
 • iPad Support  
@@ -18,7 +19,7 @@ The number one Game Boy Advance emulator for iOS is back, and has been rewritten
 • Event Distribution  
 • Wario Ware: Twisted Support  
 • iOS 7 Controller support  
-• URL Scheme support (gba4ios://ROM%20Name%20Here)  
+• URL Scheme support (gba4ios://ROM-Name-Here)  
 
 ### Classic Features ###
 
