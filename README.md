@@ -3,11 +3,11 @@ GBA4iOS 2.2
 
 ![GBA4iOS](images/gba4ios2_devices.png)
 
-The number one Game Boy Advance emulator for iOS is back, and has been rewritten from the ground up for iOS 7.
+The number one Game Boy Advance emulator for iOS, rewritten from the ground up for iOS 7 and working with the latest iOS 14.
 
 ### New Features ###
 
-• Works with iOS 13.6
+• Works with iOS 14
 • Full migrated to WKWebView  
 • Completely new emulator core based on VBA-M  
 • iPad Support  
