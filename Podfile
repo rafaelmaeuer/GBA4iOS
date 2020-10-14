@@ -10,8 +10,8 @@ def all_pods
 	pod 'RSTWebViewController', :git => 'https://github.com/rafaelmaeuer/RSTWebViewController-Legacy.git'
 	pod 'AFNetworking', '~> 4.0'
 	pod 'PSPDFTextView', :git => 'https://github.com/steipete/PSPDFTextView.git'
-	pod "ObjectiveDropboxOfficial", "~> 3.10.0"
-	pod "CrashlyticsFramework"
+	pod 'ObjectiveDropboxOfficial', '~> 3.10.0'
+	# pod 'CrashlyticsFramework'
 end
 
 target 'GBA4iOS' do
