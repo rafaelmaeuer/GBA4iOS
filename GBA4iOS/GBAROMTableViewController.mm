@@ -120,6 +120,14 @@ dispatch_queue_t directoryContentsChangedQueue() {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+- (void)loadView
+{
+    [super loadView];
+    if (@available(iOS 13.0, *)) {
+        self.tableView.backgroundColor = [UIColor systemBackgroundColor];
+    }
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -983,12 +991,16 @@ dispatch_queue_t directoryContentsChangedQueue() {
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     self.noGamesDescriptionLabel.preferredMaxLayoutWidth = CGRectGetWidth(self.tableView.bounds) - (29 * 2);
+    
+    self.showSectionTitles = NO;
 }
 
 - (void)hideNoGamesView
 {
     self.tableView.backgroundView = nil;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    
+    self.showSectionTitles = YES;
 }
 
 #pragma mark - UITableView Delegate
@@ -1599,7 +1611,7 @@ dispatch_queue_t directoryContentsChangedQueue() {
 - (void)setRomType:(GBAVisibleROMType)romType
 {
     self.romTypeSegmentedControl.selectedSegmentIndex = romType;
-    [[NSUserDefaults standardUserDefaults] setInteger:romType forKey:@"romType"];
+    [[NSUserDefaults standardUserDefaults] setInteger:romType forKey:@"visibleROMType"];
     
     switch (romType) {
         case GBAVisibleROMTypeAll:
