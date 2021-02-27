@@ -212,8 +212,6 @@
 	<false/>
 	<key>UIViewGroupOpacity</key>
 	<false/>
-	<key>UIUserInterfaceStyle</key>
-	<string>Light</string>
 	<key>UTExportedTypeDeclarations</key>
 	<array>
 		<dict>
