@@ -245,7 +245,9 @@ dispatch_queue_t directoryContentsChangedQueue() {
         frame;
     });
     // Fixes a bug with the status bar hiding after the transition between emulation view and the ROM tableview when the device is rotated while emulation is running
-    [[UIApplication sharedApplication] setStatusBarHidden:[self prefersStatusBarHidden]];
+    if (UIInterfaceOrientationIsLandscape(self.interfaceOrientation)) {
+        [[UIApplication sharedApplication] setStatusBarHidden:[self prefersStatusBarHidden]];
+    }
 }
 
 - (BOOL)prefersStatusBarHidden
