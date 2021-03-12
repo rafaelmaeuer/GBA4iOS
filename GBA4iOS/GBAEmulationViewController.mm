@@ -282,76 +282,13 @@ static GBAEmulationViewController *_emulationViewController;
 {
     CGRect bounds = [[UIScreen mainScreen] bounds];
     
-    // iOS 7 doesn't support using Nibs for Launch Screens
-    if (![[UIScreen mainScreen] respondsToSelector:@selector(fixedCoordinateSpace)])
-    {
-        UIImageView *imageView = [[UIImageView alloc] init];
-        
-        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
-        {
-            if ([[UIScreen mainScreen] isWidescreen])
-            {
-                imageView.image = [UIImage imageNamed:@"Default-568h"];
-            }
-            else
-            {
-                imageView.image = [UIImage imageNamed:@"Default"];
-            }
-        }
-        else
-        {
-            if (UIInterfaceOrientationIsPortrait(self.interfaceOrientation))
-            {
-                imageView.image = [UIImage imageNamed:@"Default-Portrait"];
-            }
-            else
-            {
-                imageView.image = [UIImage imageNamed:@"Default-Landscape"];
-            }
-        }
-        
-        [imageView sizeToFit];
-        imageView.center = CGPointMake(CGRectGetMidX(bounds), CGRectGetMidY(bounds)); // Make sure it is centered, so when it rotates it will line up
-        
-        CGAffineTransform transform = CGAffineTransformIdentity;
-        
-        if (UIInterfaceOrientationIsPortrait(self.interfaceOrientation))
-        {
-            if (self.interfaceOrientation == UIInterfaceOrientationPortrait)
-            {
-                transform = CGAffineTransformMakeRotation(RADIANS(0.0f));
-            }
-            else
-            {
-                transform = CGAffineTransformMakeRotation(RADIANS(180.0f));
-            }
-        }
-        else
-        {
-            if (self.interfaceOrientation == UIInterfaceOrientationLandscapeLeft)
-            {
-                transform = CGAffineTransformMakeRotation(RADIANS(270.0f));
-            }
-            else
-            {
-                transform = CGAffineTransformMakeRotation(RADIANS(90.0f));
-            }
-        }
-        
-        imageView.transform = transform;
-        
-        self.splashScreenView = imageView;
-    }
-    else
-    {
-        UINib *splashScreenViewNib = [UINib nibWithNibName:@"Launch Screen" bundle:nil];
-        NSArray *views = [splashScreenViewNib instantiateWithOwner:nil options:nil];
-        
-        self.splashScreenView = [views firstObject];
-        self.splashScreenView.frame = CGRectMake(0, 0, CGRectGetWidth(bounds), CGRectGetHeight(bounds));
-        
-        self.splashScreenView.layer.allowsGroupOpacity = YES;
-    }
+    UINib *splashScreenViewNib = [UINib nibWithNibName:@"Launch Screen" bundle:nil];
+    NSArray *views = [splashScreenViewNib instantiateWithOwner:nil options:nil];
+    
+    self.splashScreenView = [views firstObject];
+    self.splashScreenView.frame = CGRectMake(0, 0, CGRectGetWidth(bounds), CGRectGetHeight(bounds));
+    
+    self.splashScreenView.layer.allowsGroupOpacity = YES;
     
     UIWindow *window = [[[UIApplication sharedApplication] delegate] window];
     [window addSubview:self.splashScreenView];
